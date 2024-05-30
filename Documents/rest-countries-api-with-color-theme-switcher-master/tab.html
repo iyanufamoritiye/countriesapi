@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country infortmaion</title>
+    <link rel="stylesheet" href="css/tab.css" />
+  </head>
+  <body>
+    <header>
+      <h2>Where in the World?</h2>
+      <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">
+        <img
+          id="dark-mode-icon"
+          src="https://img.icons8.com/ios-glyphs/30/000000/moon-symbol.png"
+          alt="Dark Mode Icon"
+        />
+        <span id="dark-mode-text">Dark Mode</span>
+      </button>
+    </header>
+    <div class="back-button">
+      <a href="index.html">
+        <span class="arrow">←</span>
+        <span class="back-text">Back</span>
+      </a>
+    </div>
+    <div class="container country-container">
+      <img id="country-flag" alt="Country Flag" class="country-flag" />
+      <div class="country-details">
+        <h2 id="country-name"></h2>
+        <div class="text-point">
+          <div class="first-text-point">
+            <p>Native Name: <span id="native-name"></span></p>
+            <p>Population: <span id="population"></span></p>
+            <p>Region:<span id="region"></span></p>
+            <p>Subregion: <span id="subregion"></span></p>
+            <p>Capital:<span id="capital"></span></p>
+          </div>
+          <div class="second-text-point">
+            <p>Top Level Domain: <span id="top-level-domain"></span></p>
+            <p>Currencies: <span id="currencies"></span></p>
+            <p>Languages:<span id="languages"></span></p>
+          </div>
+        </div>
+        <p class="text-borders">
+          Borders Countries: <span id="borders"></span>
+        </p>
+      </div>
+    </div>
+    <script src=" next.js"></script>
+  </body>
+</html>

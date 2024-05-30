@@ -1,0 +1,245 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+header h2 {
+  margin: 0;
+  padding: 0 3rem;
+  color: #333;
+}
+
+body.dark-mode header h2 {
+  color: #fff;
+}
+
+header #dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  padding-right: 8.5rem;
+}
+
+#dark-mode-icon {
+  margin-right: 8px;
+}
+
+#dark-mode-text {
+  font-size: 16px;
+  color: #333;
+}
+
+body.dark-mode #dark-mode-text {
+  color: #fff;
+  font-family: sans-serif;
+}
+
+/* Main container styles */
+.container {
+  margin: 60px auto 20px auto; /* Adjusted margin to accommodate the header and search/filter */
+  padding: 20px 20px 20px 0;
+  max-width: 1200px;
+  border-radius: 11px;
+  text-align: center;
+}
+/* .regoin-search {
+  padding: 20px;
+  max-width: 1200px;
+  border-radius: 5px;
+  text-align: center;
+} */
+body.dark-mode .container {
+  background-color: #1e1e1e;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Search and filter section styles */
+.search-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.search {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.search input[type="text"] {
+  padding: 10px 40px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 35%;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.search input[type="text"]:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+}
+
+.search input[type="text"]::placeholder {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.search .search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+.filter {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.filter label {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.filter select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter select:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+}
+
+/* Country list styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem; /* Adjusted gap for better spacing */
+}
+
+li {
+  border: 1px #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start */
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.4s;
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+li:hover {
+  transform: translatey(-1.2rem);
+}
+
+body.dark-mode li {
+  background-color: #2e2e2e;
+  border-color: #444;
+}
+
+li h2 {
+  margin: 10px 0;
+  padding: 0 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+li p {
+  margin: 5px 0;
+  font-size: 12px;
+  padding: 0 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.flag-container .flag {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  /* width: 100%; */
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.flag {
+  width: 100%;
+  height: 50%;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  /* border-bottom: 1px #ccc; Optional border for separation */
+}
+
+/* Error message styles */
+#error-message {
+  display: none;
+  color: red;
+  margin-top: 10px;
+}
+
+/* Styles for country.html */
+.country-list {
+  display: grid;
+  grid-template-columns: (1fr, 4);
+  justify-content: space-between;
+  align-content: center;
+  gap: 3.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body.dark-mode a {
+  color: inherit;
+}
+@media (max-width: 75em) {
+}

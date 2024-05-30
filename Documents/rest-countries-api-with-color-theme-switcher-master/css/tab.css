@@ -1,0 +1,187 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+header h2 {
+  margin: 0;
+  padding-left: 2rem;
+  color: #333;
+}
+/* h2 {
+  margin: 10px 0;
+  padding: 0 1rem;
+  text-align: left;
+  width: 100%;
+} */
+body.dark-mode header h2 {
+  color: #fff;
+}
+
+header #dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  padding-right: 8.5rem;
+}
+
+#dark-mode-icon {
+  margin-right: 8px;
+}
+
+#dark-mode-text {
+  font-size: 16px;
+  color: #333;
+}
+
+body.dark-mode #dark-mode-text {
+  color: #fff;
+}
+
+.container {
+  margin: 50px auto 20px auto; /* Adjusted margin to accommodate the header and back button */
+  padding: 20px;
+  max-width: 1200px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.country-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.country-flag {
+  width: 45%;
+  height: auto;
+  /* border-radius: 5px; */
+}
+
+.country-details {
+  width: 50%;
+  text-align: left;
+}
+
+.country-details h2 {
+  margin-top: 50px;
+}
+
+.country-details .text-borders {
+  margin: 5px 0;
+  font-size: 16px;
+  margin-top: 60px;
+}
+
+/* Styles for border countries */
+.border-country {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+body.dark-mode .border-country {
+  border-color: #444;
+  background-color: #2e2e2e;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body.dark-mode a {
+  color: inherit;
+}
+
+/* Back button styles */
+.back-button {
+  margin: 60px 20px 20px 20px;
+}
+
+.back-button a {
+  display: flex;
+  align-items: center;
+  width: 4%;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  margin-left: 1.8rem;
+  margin-top: 6rem;
+
+  padding: 10px 20px; /* Added padding for better button appearance */
+  background-color: #fff; /* Background color for the button */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Box shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+body.dark-mode .back-button a {
+  color: #fff;
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+.back-button a:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Hover effect for the button */
+}
+
+.arrow {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.text-point {
+  display: flex;
+}
+
+.first-text-point {
+  margin-right: 100px;
+}
+
+.second-text-point {
+  margin-left: 50px;
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+  header {
+    gap: 2rem;
+  }
+}
